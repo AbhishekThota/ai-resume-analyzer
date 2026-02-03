@@ -1,1 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Resume Analyzer</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h1>AI Resume Analyzer</h1>
+
+<form method="POST">
+    <textarea name="resume" placeholder="Paste Resume Here" required></textarea>
+    <textarea name="job" placeholder="Paste Job Description Here" required></textarea>
+    <button type="submit">Analyze</button>
+</form>
+
+{% if result %}
+<div class="result">
+    <h2>Analysis Result</h2>
+    <pre>{{ result }}</pre>
+</div>
+{% endif %}
+
+</body>
+</html>
 
